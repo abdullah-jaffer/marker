@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save marker
+npm install --save canvas-marker
 ```
 
 ## Usage
