@@ -1,6 +1,6 @@
 {
   "name": "canvas-marker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "hook that facilates creating markers on screen on click",
   "author": "abdullah-jaffer",
   "license": "MIT",
