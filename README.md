@@ -15,15 +15,19 @@ npm install --save canvas-marker
 ```jsx
 import { useMarker } from 'canvas-marker'
 
-function App() {
+const App = () =>{
   const [setShowMarker, XY, setXY, getCoordinates] = useMarker(true);
 
-//remove all markers, i.e save state of markers beforehand if you plan to reuse the again
+  /** Remove all markers, i.e save state of markers 
+      beforehand if you plan to reuse the again 
+  */
   const resetMarker = () => {
     setShowMarker(false);
   }
   
-  //Add default marker points or from previous marker session
+  /** Add default marker points or get points 
+      from previous marker session 
+   */
   const addDefaultCoordinates = () => {
     setXY([[419,275], [534,308]]);
   }
@@ -35,7 +39,7 @@ function App() {
     <div className="App">
       <button onClick={resetMarker}>Reset</button>
       <button onClick={addDefaultCoordinates}>add default</button>
-      <div className="App-header" onClick={getCoordinates}>
+      <div className="Canvas" onClick={getCoordinates}>
        {points}
       </div>
     </div>
