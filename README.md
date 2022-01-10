@@ -16,13 +16,7 @@ npm install --save canvas-marker
 import { useMarker } from 'canvas-marker'
 
 function App() {
-  const [setShowMarker, XY, setXY, setCurrentEvent] = useMarker(true);
-
-  //pass canvas click event
-  const getCoordinates = (e) => {
-    const { clientX, clientY } = e; // destructuring is important here
-    setCurrentEvent(e);
-  }
+  const [setShowMarker, XY, setXY, getCoordinates] = useMarker(true);
 
 //remove all markers, i.e save state of markers beforehand if you plan to reuse the again
   const resetMarker = () => {

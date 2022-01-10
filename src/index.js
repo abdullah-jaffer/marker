@@ -4,6 +4,10 @@ export const useMarker = (marker) => {
     const [XY, setXY] = useState([]);
     const [showMarker, setShowMarker] = useState(marker);
     const [currentEvent, setCurrentEvent] = useState([]);
+    const getCoordinates = (e) => {
+      const {clientX, clientY} = e;
+      setCurrentEvent( {clientX, clientY});
+    }
     useEffect(() => {
        let newXY = [];
        if(XY){
@@ -21,5 +25,5 @@ export const useMarker = (marker) => {
             setShowMarker(true);
         }
        }, [showMarker]);
- return [setShowMarker, XY, setXY, setCurrentEvent];
+ return [setShowMarker, XY, setXY, getCoordinates];
 }
