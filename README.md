@@ -20,6 +20,7 @@ function App() {
 
   //pass canvas click event
   const getCoordinates = (e) => {
+    const { clientX, clientY } = e; // destructuring is important here
     setCurrentEvent(e);
   }
 
