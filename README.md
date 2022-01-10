@@ -15,14 +15,38 @@ npm install --save marker
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from 'marker'
+import { useMarker } from 'marker'
 
-const Example = () => {
-  const example = useMyHook()
+function App() {
+  const [setShowMarker, XY, setXY, setCurrentEvent] = useMarker(true);
+
+  //pass canvas click event
+  const getCoordinates = (e) => {
+    setCurrentEvent(e);
+  }
+
+//remove all markers, i.e save state of markers beforehand if you plan to reuse the again
+  const resetMarker = () => {
+    setShowMarker(false);
+  }
+  
+  //Add default marker points or from previous marker session
+  const addDefaultCoordinates = () => {
+    setXY([[419,275], [534,308]]);
+  }
+  
+  const points = XY.map((xy, index) =>
+  <span>{`marker`}</span>
+);
   return (
-    <div>{example}</div>
-  )
-}
+    <div className="App">
+      <button onClick={resetMarker}>Reset</button>
+      <button onClick={addDefaultCoordinates}>add default</button>
+      <div className="App-header" onClick={getCoordinates}>
+       {points}
+      </div>
+    </div>
+  );
 ```
 
 ## License
