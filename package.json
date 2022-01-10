@@ -1,6 +1,6 @@
 {
   "name": "canvas-marker",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "hook that facilates creating markers on screen on click",
   "author": "abdullah-jaffer",
   "license": "MIT",
@@ -66,5 +66,10 @@
     "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-url": "^2.1.0"
-  }
+  },
+  "keywords": [
+    "hook",
+    "map marker",
+    "canvas"
+  ]
 }
