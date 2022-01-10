@@ -13,8 +13,6 @@ npm install --save marker
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
 import { useMarker } from 'marker'
 
 function App() {
@@ -34,7 +32,7 @@ function App() {
   const addDefaultCoordinates = () => {
     setXY([[419,275], [534,308]]);
   }
-  
+
   const points = XY.map((xy, index) =>
   <span>{`marker`}</span>
 );
@@ -49,6 +47,7 @@ function App() {
   );
 ```
 
+![Example](./marker-sample.gif)
 ## License
 
 MIT © [abdullah-jaffer](https://github.com/abdullah-jaffer)
