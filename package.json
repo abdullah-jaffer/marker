@@ -1,10 +1,10 @@
 {
-  "name": "marker",
+  "name": "canvas-marker",
   "version": "1.0.0",
   "description": "hook that facilates creating markers on screen on click",
   "author": "abdullah-jaffer",
   "license": "MIT",
-  "repository": "abdullah-jaffer/marker",
+  "repository": "https://github.com/abdullah-jaffer/marker",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

@@ -13,7 +13,7 @@ npm install --save marker
 ## Usage
 
 ```jsx
-import { useMarker } from 'marker'
+import { useMarker } from 'canvas-marker'
 
 function App() {
   const [setShowMarker, XY, setXY, setCurrentEvent] = useMarker(true);
